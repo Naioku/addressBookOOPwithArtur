@@ -24,6 +24,7 @@ class UzytkownikMenedzer
     bool czyIstniejeLogin(string login);
 
 public:
+    UzytkownikMenedzer();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };
