@@ -2,7 +2,7 @@
 
 using namespace std;
 
-UzytkownikMenedzer::UzytkownikMenedzer()
+void UzytkownikMenedzer::wczytajUzytkownikowDoWektora()
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
