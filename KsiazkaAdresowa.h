@@ -13,10 +13,12 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
-    PlikZUzytkownikami plikZUzytkownikami;
 
 public:
-    KsiazkaAdresowa();
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
+        uzytkownikMenedzer.wczytajUzytkownikowDoWektora();
+    };
+
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };
