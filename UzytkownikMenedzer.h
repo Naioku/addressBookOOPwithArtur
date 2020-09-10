@@ -18,8 +18,8 @@ class UzytkownikMenedzer
     int idZalogowanegoUzytkownika;
     vector<Uzytkownik> uzytkownicy;
     PlikZUzytkownikami plikZUzytkownikami;
-    Uzytkownik podajDaneNowegoUzytkownika();
 
+    Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 
@@ -28,6 +28,10 @@ public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowDoWektora();
+    int logowanieUzytkownika();
+    void wylogowanieUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H
