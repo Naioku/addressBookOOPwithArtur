@@ -18,9 +18,14 @@ public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
         uzytkownikMenedzer.wczytajUzytkownikowDoWektora();
     };
-
     void rejestracjaUzytkownika();
+    int logowanieUzytkownika();
+    void wylogowanieUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+
     void wypiszWszystkichUzytkownikow();
+
 };
 
 #endif // KSIAZKAADRESOWA_H
