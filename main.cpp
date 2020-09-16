@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
     while (true)
     {
@@ -14,19 +14,24 @@ int main()
             cout << "INTERFEJS UZYTKOWNIKA" << endl;
             cout << "Twoje id: " << ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika() << endl << endl;
             //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+            //ksiazkaAdresowa.dodajAdresata();
+            ksiazkaAdresowa.dodajAdresata();
+            ksiazkaAdresowa.dodajAdresata();
+            ksiazkaAdresowa.wyswietlWszystkichAdresatow();
             ksiazkaAdresowa.wylogowanieUzytkownika();
 
         }
         else
         {
             cout << "Jestes wylogowany. Zaloguj sie, aby przejsc do INTERFEJSU UZYTKOWNIKA." << endl << endl;
+            ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
             ksiazkaAdresowa.logowanieUzytkownika();
 
         }
     }
 
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    //ksiazkaAdresowa.rejestracjaUzytkownika();
+    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
     return 0;
 }

@@ -5,7 +5,6 @@ using namespace std;
 void UzytkownikMenedzer::wczytajUzytkownikowDoWektora()
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-    idZalogowanegoUzytkownika = 0;
 }
 
 void UzytkownikMenedzer::rejestracjaUzytkownika()
@@ -23,7 +22,6 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;
 
-    //uzytkownik.id = pobierzIdNowegoUzytkownika(uzytkownicy);
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
 
     do
@@ -66,14 +64,16 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
     int iloscUzytkownikow = uzytkownicy.size();
     for (int i = 0; i < iloscUzytkownikow; i++)
     {
+        cout << endl;
         cout << "Id: " << uzytkownicy[i].pobierzId() << endl;
         cout << "Login: " << uzytkownicy[i].pobierzLogin() << endl;
         cout << "Haslo: " << uzytkownicy[i].pobierzHaslo() << endl;
+        cout << endl;
     }
 
 }
 
-int UzytkownikMenedzer::logowanieUzytkownika()
+void UzytkownikMenedzer::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
@@ -93,21 +93,21 @@ int UzytkownikMenedzer::logowanieUzytkownika()
 
                 if (itr -> pobierzHaslo() == haslo)
                 {
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    idZalogowanegoUzytkownika = itr -> pobierzId();
-                    return idZalogowanegoUzytkownika;
+                    return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            return 0;
+            return;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+    return;
 }
 
 void UzytkownikMenedzer::wylogowanieUzytkownika()
@@ -119,6 +119,12 @@ void UzytkownikMenedzer::wylogowanieUzytkownika()
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
+}
+
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    if(idZalogowanegoUzytkownika > 0) return true;
+    else                              return false;
 }
 
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
@@ -138,5 +144,3 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
-
-
