@@ -31,6 +31,8 @@ public:
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
 
+    char wybierzOpcjeZMenuUzytkownika();
+
 };
 
 #endif // ADRESATMENEGER_H

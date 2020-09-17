@@ -40,6 +40,8 @@ public:
 
     void wypiszWszystkichUzytkownikow();
     void wypiszWszystkichAdresatow();
+
+    char wybierzOpcjeZMenuGlownego();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H

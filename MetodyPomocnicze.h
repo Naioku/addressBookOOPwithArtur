@@ -15,6 +15,7 @@ public:
     static string konwerjsaIntNaString(int liczba);
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     static bool czyPlikJestPusty(fstream &plikTekstowy);
+    static char wczytajZnak();
 };
 
 #endif // METODYPOMOCNICZE_H
