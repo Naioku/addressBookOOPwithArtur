@@ -40,6 +40,9 @@ public:
     void wypiszWszystkichUzytkownikow();
     void wyswietlWszystkichAdresatow();
 
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
+
 };
 
 #endif // KSIAZKAADRESOWA_H

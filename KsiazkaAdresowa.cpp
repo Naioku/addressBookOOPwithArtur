@@ -57,3 +57,14 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenedzer->wyswietlWszystkichAdresatow();
 }
+
+
+char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
+{
+    return uzytkownikMenedzer.wybierzOpcjeZMenuGlownego();
+}
+
+char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
+{
+    return adresatMenedzer->wybierzOpcjeZMenuUzytkownika();
+}
