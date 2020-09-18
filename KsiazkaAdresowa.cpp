@@ -12,7 +12,7 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     uzytkownikMenedzer.logowanieUzytkownika();
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
-        adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+        adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWA, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
     }
 }
 
@@ -46,7 +46,18 @@ void KsiazkaAdresowa::dodajAdresata()
     }
 }
 
-
+void KsiazkaAdresowa::usunAdresata()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->usunAdresata();
+    }
+    else
+    {
+        cout << "Aby usunac adresata, nalezy sie najpierw zalogowac." << endl;
+        system("pause");
+    }
+}
 
 void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 {

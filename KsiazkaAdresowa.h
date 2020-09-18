@@ -15,10 +15,11 @@ class KsiazkaAdresowa
     UzytkownikMenedzer uzytkownikMenedzer;
     AdresatMenedzer *adresatMenedzer;
     const string NAZWA_PLIKU_Z_ADRESATAMI;
+    const string NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWA;
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
-        : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami, string nazwaPlikuZAdresatamiTymczasowa)
+        : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami), NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWA(nazwaPlikuZAdresatamiTymczasowa)
         {
             adresatMenedzer = NULL;
         };
@@ -36,6 +37,7 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
 
     void dodajAdresata();
+    void usunAdresata();
 
     void wypiszWszystkichUzytkownikow();
     void wyswietlWszystkichAdresatow();

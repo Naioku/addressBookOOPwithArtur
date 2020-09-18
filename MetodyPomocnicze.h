@@ -16,6 +16,7 @@ public:
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     static bool czyPlikJestPusty(fstream &plikTekstowy);
     static char wczytajZnak();
+    static int wczytajLiczbeCalkowita();
 };
 
 #endif // METODYPOMOCNICZE_H

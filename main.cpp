@@ -5,37 +5,7 @@ using namespace std;
 
 int main()
 {
-    /*
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
-
-    while (true)
-    {
-        if (ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika() != 0)
-        {
-            cout << "INTERFEJS UZYTKOWNIKA" << endl;
-            cout << "Twoje id: " << ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika() << endl << endl;
-            //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-            //ksiazkaAdresowa.dodajAdresata();
-            ksiazkaAdresowa.dodajAdresata();
-            ksiazkaAdresowa.dodajAdresata();
-            ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-            ksiazkaAdresowa.wylogowanieUzytkownika();
-
-        }
-        else
-        {
-            cout << "Jestes wylogowany. Zaloguj sie, aby przejsc do INTERFEJSU UZYTKOWNIKA." << endl << endl;
-            ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-            ksiazkaAdresowa.logowanieUzytkownika();
-
-        }
-    }
-
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    */
-
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt", "Adresaci_tymczas.txt");
     char wybor;
 
     while (true)
@@ -81,11 +51,10 @@ int main()
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
-            /*
             case '5':
-                idUsunietegoAdresata = usunAdresata(adresaci);
-                idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                ksiazkaAdresowa.usunAdresata();
                 break;
+            /*
             case '6':
                 edytujAdresata(adresaci);
                 break;
@@ -103,4 +72,17 @@ int main()
     return 0;
 }
 
+// TEST ADRESAT_MENEDZER
+#include "AdresatMenedzer.h"
 
+int adresatMenedzer_main()
+{
+    AdresatMenedzer adresatMenedzer("Adresaci.txt", "Adresaci_tymczas.txt", 2);
+
+    adresatMenedzer.dodajAdresata();
+    adresatMenedzer.wyswietlWszystkichAdresatow();
+    //adresatMenedzer.usunAdresata();
+    //adresatMenedzer.wyswietlWszystkichAdresatow();
+
+    return 0;
+}
