@@ -21,6 +21,7 @@ class PlikZAdresatami
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
 
@@ -37,6 +38,7 @@ public:
     void usunWybranaLinieWPliku(int idUsuwanegoAdresata);
     void odswiezIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata);
     void pobierzZPlikuIdOstatniegoAdresata();
+    void edytujWybranaLinieWPliku(Adresat adresat);
 };
 
 #endif // PLIKZADRESATAMI_H

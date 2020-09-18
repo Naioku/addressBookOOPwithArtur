@@ -38,6 +38,7 @@ public:
 
     void dodajAdresata();
     void usunAdresata();
+    void edytujAdresata();
 
     void wypiszWszystkichUzytkownikow();
     void wyswietlWszystkichAdresatow();
