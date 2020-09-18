@@ -20,6 +20,8 @@ class AdresatMenedzer
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 
 
 public:
@@ -32,6 +34,7 @@ public:
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void usunAdresata();
+    void edytujAdresata();
 
     char wybierzOpcjeZMenuUzytkownika();
 

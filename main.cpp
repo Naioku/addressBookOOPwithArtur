@@ -54,11 +54,9 @@ int main()
             case '5':
                 ksiazkaAdresowa.usunAdresata();
                 break;
-            /*
             case '6':
-                edytujAdresata(adresaci);
+                ksiazkaAdresowa.edytujAdresata();
                 break;
-            */
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
@@ -79,8 +77,9 @@ int adresatMenedzer_main()
 {
     AdresatMenedzer adresatMenedzer("Adresaci.txt", "Adresaci_tymczas.txt", 2);
 
-    adresatMenedzer.dodajAdresata();
+    //adresatMenedzer.dodajAdresata();
     adresatMenedzer.wyswietlWszystkichAdresatow();
+    adresatMenedzer.edytujAdresata();
     //adresatMenedzer.usunAdresata();
     //adresatMenedzer.wyswietlWszystkichAdresatow();
 
