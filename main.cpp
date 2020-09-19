@@ -40,14 +40,12 @@ int main()
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
                 break;
-            /*
             case '2':
-                wyszukajAdresatowPoImieniu(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-                wyszukajAdresatowPoNazwisku(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
-            */
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
@@ -77,9 +75,12 @@ int adresatMenedzer_main()
 {
     AdresatMenedzer adresatMenedzer("Adresaci.txt", "Adresaci_tymczas.txt", 2);
 
-    //adresatMenedzer.dodajAdresata();
+    adresatMenedzer.dodajAdresata();
+    adresatMenedzer.dodajAdresata();
     adresatMenedzer.wyswietlWszystkichAdresatow();
-    adresatMenedzer.edytujAdresata();
+    adresatMenedzer.wyszukajAdresatowPoImieniu();
+    adresatMenedzer.wyszukajAdresatowPoNazwisku();
+    //adresatMenedzer.edytujAdresata();
     //adresatMenedzer.usunAdresata();
     //adresatMenedzer.wyswietlWszystkichAdresatow();
 
